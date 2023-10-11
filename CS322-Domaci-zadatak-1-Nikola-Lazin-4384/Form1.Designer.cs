@@ -28,63 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
+            ime_tb = new TextBox();
+            prezime_tb = new TextBox();
+            adresa_tb = new TextBox();
+            ime_lb = new Label();
+            prezime_lb = new Label();
+            adresa_lb = new Label();
             button1 = new Button();
+            alert_lb = new Label();
             SuspendLayout();
             // 
-            // textBox1
+            // ime_tb
             // 
-            textBox1.Location = new Point(153, 86);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(223, 23);
-            textBox1.TabIndex = 0;
+            ime_tb.Location = new Point(153, 86);
+            ime_tb.Name = "ime_tb";
+            ime_tb.Size = new Size(223, 23);
+            ime_tb.TabIndex = 0;
             // 
-            // textBox2
+            // prezime_tb
             // 
-            textBox2.Location = new Point(153, 130);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(223, 23);
-            textBox2.TabIndex = 1;
+            prezime_tb.Location = new Point(153, 130);
+            prezime_tb.Name = "prezime_tb";
+            prezime_tb.Size = new Size(223, 23);
+            prezime_tb.TabIndex = 1;
             // 
-            // textBox3
+            // adresa_tb
             // 
-            textBox3.Location = new Point(153, 171);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(223, 23);
-            textBox3.TabIndex = 2;
+            adresa_tb.Location = new Point(153, 171);
+            adresa_tb.Name = "adresa_tb";
+            adresa_tb.Size = new Size(223, 23);
+            adresa_tb.TabIndex = 2;
             // 
-            // label1
+            // ime_lb
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(120, 86);
-            label1.Name = "label1";
-            label1.Size = new Size(27, 15);
-            label1.TabIndex = 3;
-            label1.Text = "Ime";
-            label1.Click += label1_Click;
+            ime_lb.AutoSize = true;
+            ime_lb.Location = new Point(120, 86);
+            ime_lb.Name = "ime_lb";
+            ime_lb.Size = new Size(27, 15);
+            ime_lb.TabIndex = 3;
+            ime_lb.Text = "Ime";
+            ime_lb.Click += label1_Click;
             // 
-            // label2
+            // prezime_lb
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(98, 133);
-            label2.Name = "label2";
-            label2.Size = new Size(49, 15);
-            label2.TabIndex = 5;
-            label2.Text = "Prezime";
+            prezime_lb.AutoSize = true;
+            prezime_lb.Location = new Point(98, 133);
+            prezime_lb.Name = "prezime_lb";
+            prezime_lb.Size = new Size(49, 15);
+            prezime_lb.TabIndex = 5;
+            prezime_lb.Text = "Prezime";
+            prezime_lb.Click += label2_Click;
             // 
-            // label3
+            // adresa_lb
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(104, 171);
-            label3.Name = "label3";
-            label3.Size = new Size(43, 15);
-            label3.TabIndex = 7;
-            label3.Text = "Adresa";
+            adresa_lb.AutoSize = true;
+            adresa_lb.Location = new Point(104, 171);
+            adresa_lb.Name = "adresa_lb";
+            adresa_lb.Size = new Size(43, 15);
+            adresa_lb.TabIndex = 7;
+            adresa_lb.Text = "Adresa";
             // 
             // button1
             // 
@@ -96,18 +98,29 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // alert_lb
+            // 
+            alert_lb.AutoSize = true;
+            alert_lb.ForeColor = Color.Red;
+            alert_lb.Location = new Point(153, 32);
+            alert_lb.Name = "alert_lb";
+            alert_lb.Size = new Size(0, 15);
+            alert_lb.TabIndex = 9;
+            alert_lb.Click += label4_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(540, 310);
+            Controls.Add(alert_lb);
             Controls.Add(button1);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(adresa_lb);
+            Controls.Add(prezime_lb);
+            Controls.Add(ime_lb);
+            Controls.Add(adresa_tb);
+            Controls.Add(prezime_tb);
+            Controls.Add(ime_tb);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
@@ -117,12 +130,13 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private Label label1;
-        private Label label2;
-        private Label label3;
+        private TextBox ime_tb;
+        private TextBox prezime_tb;
+        private TextBox adresa_tb;
+        private Label ime_lb;
+        private Label prezime_lb;
+        private Label adresa_lb;
         private Button button1;
+        private Label alert_lb;
     }
 }
